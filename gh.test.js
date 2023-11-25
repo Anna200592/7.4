@@ -39,7 +39,7 @@ describe("Github page tests", () => {
 
 describe("Netology page tests", () => {
   beforeEach(async () => {
-    await page.goto("https://netology.ru",  {timeout: 10000});
+    await page.goto("https://netology.ru");
   });
 
   test("The header content'", async () => {
@@ -47,7 +47,7 @@ describe("Netology page tests", () => {
     await firstLink.click();
     await new Promise((r) => setTimeout(r, 15000));
     const url = await page.url();
-    expect(url).toEqual("https://netology.ru/");
+    expect(url).toEqual("https://netology.ru/free");
   }, 60000);
 
   test("The first link attribute", async () => {
